@@ -1,0 +1,11 @@
+{
+  "name": "payment-tools",
+  "version": "1.0.0",
+  "description": "Polar payment processing and subscription management for Next.js SaaS applications",
+  "author": {
+    "name": "Leon van Zyl",
+    "email": "leon.vanzyl@gmail.com"
+  },
+  "keywords": ["polar", "payments", "subscriptions", "billing", "checkout"],
+  "license": "MIT"
+}

@@ -1,0 +1,13 @@
+{
+  "PostToolUse": [
+    {
+      "matcher": "Write|Edit",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "echo '✓ Next.js file updated. Run `next lint` or `tsc --noEmit` to check for errors.'"
+        }
+      ]
+    }
+  ]
+}
