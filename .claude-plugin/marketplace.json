@@ -2,7 +2,8 @@
   "name": "nextjs-saas-marketplace",
   "owner": {
     "name": "Leon van Zyl",
-    "email": "leon.vanzyl@gmail.com"
+    "email": "leon.vanzyl@gmail.com",
+    "url": "https://github.com/leonvanzyl"
   },
   "metadata": {
     "description": "Comprehensive plugin marketplace for Next.js 15 SaaS developers with React 19, Tailwind, shadcn/ui, Postgres, Drizzle ORM, AI SDK, BetterAuth, and Polar",
