@@ -1,9 +1,9 @@
 {
-  "name": "nextjs-saas-marketplace",
+  "name": "perseon-ai-marketplace",
   "owner": {
-    "name": "Leon van Zyl",
-    "email": "leon.vanzyl@gmail.com",
-    "url": "https://github.com/leonvanzyl"
+    "name": "Darryn Balanco",
+    "email": "darryn@optimus01.com",
+    "url": "https://github.com/dbalanco"
   },
   "metadata": {
     "description": "Comprehensive plugin marketplace for Next.js 15 SaaS developers with React 19, Tailwind, shadcn/ui, Postgres, Drizzle ORM, AI SDK, BetterAuth, and Polar",

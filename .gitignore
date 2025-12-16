@@ -1,4 +1,16 @@
-perseon/
+# macOS
+.DS_Store
+
+# Claude Code
 .claude/
+
+# GitHub
 .github/
+
+# Project directories
+memory-bank/
+perseon/
+specs/
+
+# Environment
 env.local

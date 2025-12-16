@@ -112,6 +112,7 @@ nextjs-saas-marketplace/
 ## Command Reference
 
 ### Next.js Core
+
 - `/create-page` - Create App Router pages
 - `/create-api` - Generate API routes
 - `/create-server-action` - Create Server Actions
@@ -119,32 +120,38 @@ nextjs-saas-marketplace/
 - `/optimize-images` - Image optimization
 
 ### Database Tools
+
 - `/setup-drizzle` - Initialize Drizzle ORM
 - `/create-schema` - Generate database schemas
 - `/generate-migration` - Create migrations
 - `/create-query` - Generate database queries
 
 ### Auth Tools
+
 - `/setup-betterauth` - Initialize BetterAuth
 - `/create-protected-route` - Create protected routes
 - `/add-oauth-provider` - Add OAuth providers
 
 ### Payment Tools
+
 - `/setup-polar` - Initialize Polar
 - `/create-checkout` - Generate checkout flows
 - `/handle-webhooks` - Setup webhook handlers
 
 ### UI Components
+
 - `/add-shadcn-component` - Install shadcn/ui components
 - `/create-custom-component` - Create custom components
 - `/create-form` - Generate forms with validation
 
 ### AI Integration
+
 - `/setup-ai-sdk` - Initialize AI SDK
 - `/create-chat-endpoint` - Create chat APIs
 - `/add-function-calling` - Implement function calling
 
 ### Testing & Quality
+
 - `/setup-vitest` - Configure Vitest
 - `/create-test` - Generate test files
 - `/setup-playwright` - Configure Playwright
@@ -153,44 +160,54 @@ nextjs-saas-marketplace/
 ## Specialized Agents
 
 ### 1. nextjs-expert
+
 - **Focus**: Next.js 15, App Router, React 19
 - **Capabilities**: Routing, Server Components, data fetching, performance
 
 ### 2. performance-optimizer
+
 - **Focus**: Performance optimization
 - **Capabilities**: Caching, Core Web Vitals, bundle optimization
 
 ### 3. database-architect
+
 - **Focus**: Database design and Drizzle ORM
 - **Capabilities**: Schema design, migrations, query optimization
 
 ### 4. auth-specialist
+
 - **Focus**: BetterAuth and security
 - **Capabilities**: Authentication, OAuth, session management, security
 
 ### 5. payments-specialist
+
 - **Focus**: Polar payments
 - **Capabilities**: Checkout flows, subscriptions, webhooks, billing
 
 ### 6. ui-designer
+
 - **Focus**: UI/UX with shadcn/ui and Tailwind
 - **Capabilities**: Component design, responsive layouts, accessibility
 
 ### 7. ai-integration-specialist
+
 - **Focus**: Vercel AI SDK
 - **Capabilities**: LLM integration, streaming, function calling
 
 ### 8. quality-engineer
+
 - **Focus**: Testing and code quality
 - **Capabilities**: Unit tests, E2E tests, linting, CI/CD
 
 ## MCP Servers
 
 ### shadcn (ui-components plugin)
+
 - **Purpose**: shadcn/ui integration
 - **Command**: `npx shadcn@latest mcp`
 
 ### playwright (testing-quality plugin)
+
 - **Purpose**: Playwright integration
 - **Command**: `npx @playwright/mcp@latest`
 
@@ -225,6 +242,7 @@ nextjs-saas-marketplace/
 ## Installation Size
 
 Approximate sizes:
+
 - Commands: ~25-50 KB total
 - Agents: ~15-30 KB total
 - Manifests: ~5 KB total
@@ -246,7 +264,7 @@ To update or add features:
 - **Marketplace Version**: 1.0.0
 - **All Plugin Versions**: 1.0.0
 - **Created**: 2025
-- **Author**: Leon van Zyl (leon.vanzyl@gmail.com)
+- **Author**: Leon van Zyl (<leon.vanzyl@gmail.com>)
 
 ---
 
