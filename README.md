@@ -1,6 +1,6 @@
-# Next.js SaaS Marketplace for Claude Code
+# Perseon AI Marketplace for Claude Code
 
-A comprehensive plugin marketplace for Next.js 15 SaaS developers, featuring tools and agents for modern full-stack development.
+A comprehensive plugin marketplace for Next.js 15 SaaS developers, featuring tools and agents for modern full-stack development with AI-powered capabilities.
 
 ## Tech Stack Coverage
 
@@ -35,13 +35,13 @@ Then in Claude Code:
 Install all plugins at once, or pick specific ones:
 
 ```
-/plugin install nextjs-core@nextjs-saas-marketplace
-/plugin install database-tools@nextjs-saas-marketplace
-/plugin install auth-tools@nextjs-saas-marketplace
-/plugin install payment-tools@nextjs-saas-marketplace
-/plugin install ui-components@nextjs-saas-marketplace
-/plugin install ai-integration@nextjs-saas-marketplace
-/plugin install testing-quality@nextjs-saas-marketplace
+/plugin install nextjs-core@perseon-ai-marketplace
+/plugin install database-tools@perseon-ai-marketplace
+/plugin install auth-tools@perseon-ai-marketplace
+/plugin install payment-tools@perseon-ai-marketplace
+/plugin install ui-components@perseon-ai-marketplace
+/plugin install ai-integration@perseon-ai-marketplace
+/plugin install testing-quality@perseon-ai-marketplace
 ```
 
 Or use the interactive installer:
@@ -225,8 +225,8 @@ Each plugin can be customized by editing the files in the `plugins/` directory:
 After making changes, reinstall the plugin:
 
 ```
-/plugin uninstall plugin-name@nextjs-saas-marketplace
-/plugin install plugin-name@nextjs-saas-marketplace
+/plugin uninstall plugin-name@perseon-ai-marketplace
+/plugin install plugin-name@perseon-ai-marketplace
 ```
 
 ## Contributing
@@ -240,7 +240,8 @@ To add new commands or improve existing ones:
 ## Support
 
 For issues or questions:
-- Email: leon.vanzyl@gmail.com
+- Email: darryn@optimus01.com
+- GitHub: [github.com/dbalanco](https://github.com/dbalanco)
 - Check command help: `/help`
 
 ## License
@@ -249,6 +250,7 @@ MIT License - See individual plugin licenses for details.
 
 ---
 
-**Built for Next.js SaaS developers by Leon van Zyl**
+**Perseon AI Marketplace - Built for Next.js SaaS developers**
+**Maintained by Darryn Balanco**
 
 Happy building! 🚀
