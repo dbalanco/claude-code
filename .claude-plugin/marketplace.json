@@ -73,6 +73,22 @@
       "version": "0.1.0",
       "category": "payments",
       "keywords": ["stripe", "payments", "webhooks", "api", "security"]
+    },
+    {
+      "name": "vercel",
+      "source": "./external_plugins/vercel",
+      "description": "Official Vercel MCP server for deployment and project management. Search documentation, manage deployments, configure projects, and interact with the Vercel platform directly from Claude Code.",
+      "version": "1.0.0",
+      "category": "deployment",
+      "keywords": ["vercel", "deployment", "hosting", "edge", "serverless", "projects", "documentation"]
+    },
+    {
+      "name": "neon",
+      "source": "./external_plugins/neon",
+      "description": "Neon serverless Postgres MCP server. Manage databases, create branches, run queries, and interact with your Neon projects. Features instant provisioning, automatic scaling, and database branching for development workflows.",
+      "version": "1.0.0",
+      "category": "database",
+      "keywords": ["neon", "postgres", "postgresql", "database", "serverless", "branching", "sql", "cloud-database"]
     }
   ]
 }
