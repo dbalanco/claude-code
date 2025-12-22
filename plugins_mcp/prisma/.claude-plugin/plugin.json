@@ -1,0 +1,7 @@
+{
+  "name": "prisma",
+  "description": "Prisma MCP allows you to manage your databases with natural language via MCP in Claude, Codex, Cursor, Warp, ChatGPT and other AI agents.",
+  "author": {
+    "name": "prisma"
+  }
+}
