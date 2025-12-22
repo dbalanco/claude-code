@@ -1,9 +1,8 @@
 {
   "apify": {
-    "command": "npx",
-    "args": ["-y", "@apify/actors-mcp-server", "--tools", "actors,docs,experimental,runs,storage"],
-      "env": {
-        "APIFY_TOKEN": "${APIFY_TOKEN}"
-      }
+    "url": "https://mcp.apify.com/?tools=actors,docs,experimental,runs,storage",
+    "headers": {
+      "Authorization": "Bearer ${APIFY_TOKEN}"
+    }
   }
 }
