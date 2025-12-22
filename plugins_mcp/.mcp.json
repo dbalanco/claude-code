@@ -1,0 +1,9 @@
+{
+  "actors-mcp-server": {
+    "command": "npx",
+    "args": ["-y", "@apify/actors-mcp-server"],
+    "env": {
+      "APIFY_TOKEN": "${APIFY_TOKEN}"
+    }
+  }
+}
