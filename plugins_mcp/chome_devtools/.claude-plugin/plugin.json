@@ -1,0 +1,7 @@
+{
+  "name": "chrome-devtools",
+  "description": "Chrome DevTools lets your coding agent (such as Gemini, Claude, Cursor or Copilot) control and inspect a live Chrome browser.",
+  "author": {
+    "name": "Chrome DevTools "
+  }
+}
