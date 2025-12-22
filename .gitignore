@@ -10,7 +10,10 @@
 # Project directories
 memory-bank/
 perseon/
+perseon/claude-code/
 specs/
 
 # Environment
 env.local
+env.local.mcp
+*.env.local

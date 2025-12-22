@@ -5,7 +5,7 @@ Complete structure of the Next.js SaaS Marketplace for Claude Code.
 ## Directory Tree
 
 ```
-nextjs-saas-marketplace/
+perseon-ai-marketplace/
 ├── .claude-plugin/
 │   └── marketplace.json              # Main marketplace manifest
 │
