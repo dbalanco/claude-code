@@ -19,12 +19,36 @@
       "keywords": ["documentation", "specifications", "progress-tracking", "project-management", "markdown", "automation"]
     },
     {
+      "name": "apify",
+      "source": "./plugins_mcp/apify",
+      "description": "Apify MCP server provides access to a marketplace for web scraping and data extraction tools.",
+      "version": "1.0.0",
+      "category": "automation",
+      "keywords": ["apify", "web-scraping", "automation", "data-extraction", "crawling", "actors"]
+    },
+    {
+      "name": "chrome-devtools",
+      "source": "./plugins_mcp/chome_devtools",
+      "description": "Chrome DevTools lets your coding agent (such as Gemini, Claude, Cursor or Copilot) control and inspect a live Chrome browser.",
+      "version": "1.0.0",
+      "category": "testing",
+      "keywords": ["chrome", "devtools", "browser", "automation", "debugging", "inspection"]
+    },
+    {
       "name": "context7",
       "source": "./plugins_mcp/context7",
       "description": "Upstash Context7 MCP server for up-to-date documentation lookup. Pull version-specific documentation and code examples directly from source repositories into your LLM context.",
       "version": "1.0.0",
       "category": "documentation",
       "keywords": ["documentation", "upstash", "context", "mcp", "code-examples", "repository-docs"]
+    },
+    {
+      "name": "firecrawl",
+      "source": "./plugins_mcp/firecrawl",
+      "description": "Firecrawl MCP server for intelligent web scraping and crawling. Extract clean, LLM-ready data from websites with advanced crawling capabilities, JavaScript rendering, and content extraction.",
+      "version": "1.0.0",
+      "category": "automation",
+      "keywords": ["firecrawl", "web-scraping", "crawling", "data-extraction", "javascript-rendering", "content-extraction"]
     },
     {
       "name": "shadcn",

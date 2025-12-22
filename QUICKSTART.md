@@ -1,231 +1,78 @@
 # Quick Start Guide
 
-Get your Next.js SaaS project up and running with Claude Code plugins in 5 minutes.
+Get your Next.js SaaS project documentation and development tools set up in 5 minutes with the Perseon AI Marketplace.
 
 ## Step 1: Install the Marketplace
 
-From your project directory:
+From your project root (ensure you have [Claude Code](https://docs.anthropic.com/claude/docs/claude-code) installed):
 
 ```bash
 # Start Claude Code
 claude
-```
 
-In Claude Code:
-
-```
+# Add this directory as a plugin marketplace
 /plugin marketplace add .
 ```
 
 ## Step 2: Install Core Plugins
 
-Install the essential plugins for your stack:
+Install the essential productivity tools:
 
 ```
-/plugin install nextjs-core@nextjs-saas-marketplace
-/plugin install database-tools@nextjs-saas-marketplace
-/plugin install auth-tools@nextjs-saas-marketplace
-/plugin install ui-components@nextjs-saas-marketplace
+/plugin install documentation-tools@perseon-ai-marketplace
 ```
 
-**Restart Claude Code** to activate the plugins.
+**Note:** You may need to restart Claude Code to fully activate all plugin capabilities.
 
-## Step 3: Initialize Your Stack
+## Step 3: Configure MCP Plugins
 
-### Set up Database (Drizzle + Postgres)
+External MCP plugins are pre-configured in `plugins_mcp/`. To enable those that require API keys (like GitHub or Firecrawl):
 
-```
-/setup-drizzle
-```
+1. Open `env.local.mcp` in your project root.
+2. Fill in your API keys:
 
-Follow the prompts to configure Drizzle ORM with your Postgres database.
+   ```bash
+   GITHUB_PERSONAL_ACCESS_TOKEN=your_token
+   CONTEXT7_API_KEY=your_key
+   FIRECRAWL_API_KEY=your_key
+   ```
 
-### Set up Authentication (BetterAuth)
+3. Claude Code will automatically detect these on the next start.
 
-```
-/setup-betterauth
-```
+## Step 4: Use the Documentation Tools
 
-Configure authentication with email/password and optional OAuth.
+The `documentation-tools` plugin helps you track progress through your feature specifications.
 
-### Set up UI (shadcn/ui)
+1. **Create Feature Specs:** Organize your features in `/specs/feature-name/` with an `implementation-plan.md` using markdown checkboxes:
 
-```
-/add-shadcn-component button
-/add-shadcn-component form
-/add-shadcn-component card
-```
+   ```markdown
+   - [x] Database model
+   - [ ] API endpoint
+   ```
 
-Install the shadcn/ui components you need.
+2. **Generate Dashboard:**
 
-## Step 4: Create Your First Feature
+   ```
+   /update-specs
+   ```
 
-### Create a Protected Dashboard Page
-
-```
-/create-page /dashboard
-```
-
-Then:
-
-```
-/create-protected-route
-```
-
-### Add a Database Schema
-
-```
-/create-schema
-```
-
-Follow prompts to create your first table (e.g., "users", "posts", "products").
-
-### Generate Migration
-
-```
-/generate-migration
-```
-
-### Create a Form
-
-```
-/create-form
-```
-
-## Step 5: Optional Services
-
-### Add Payments (Polar)
-
-```
-/plugin install payment-tools@nextjs-saas-marketplace
-/setup-polar
-/create-checkout
-```
-
-### Add AI Features (Vercel AI SDK)
-
-```
-/plugin install ai-integration@nextjs-saas-marketplace
-/setup-ai-sdk
-/create-chat-endpoint
-```
-
-### Add Testing
-
-```
-/plugin install testing-quality@nextjs-saas-marketplace
-/setup-vitest
-/setup-playwright
-```
-
-## Common Workflows
-
-### Building a User Profile Page
-
-```
-Can you create a user profile page at /profile with:
-- Display user information from the database
-- Edit form for updating profile
-- Protected route requiring authentication
-- Proper error handling
-```
-
-Claude will automatically:
-- Create the page with Next.js patterns
-- Add database queries with Drizzle
-- Implement authentication checks
-- Generate form components with shadcn/ui
-
-### Creating an API Endpoint
-
-```
-/create-api /api/posts
-```
-
-Then describe what the API should do:
-
-```
-Create CRUD operations for blog posts with authentication
-```
-
-### Adding a New Component
-
-```
-/create-custom-component
-```
-
-Or use shadcn:
-
-```
-/add-shadcn-component dialog
-```
-
-## Using Specialized Agents
-
-You don't need to explicitly call agents - Claude automatically uses them based on context:
-
-**Ask naturally:**
-```
-- "Help me optimize this page's performance"        → performance-optimizer
-- "Design a pricing table component"                → ui-designer  
-- "How should I structure my database schema?"      → database-architect
-- "Set up OAuth with Google"                        → auth-specialist
-- "Implement subscription webhooks"                 → payments-specialist
-```
-
-## Pro Tips
-
-1. **Use Interactive Plugin Manager**: `/plugin` to browse and manage plugins
-2. **Check Available Commands**: `/help` to see all commands
-3. **Combine Commands**: Chain commands for complete features
-4. **Ask Questions**: Claude understands natural language - just describe what you need
-5. **Iterate Quickly**: Use commands to scaffold, then refine with natural conversation
+   This generates or updates `/specs/app-specs.md` with a visual progress dashboard.
 
 ## Common Commands Reference
 
-| Command | Purpose |
-|---------|---------|
-| `/create-page` | New Next.js page |
-| `/create-api` | New API route |
-| `/create-schema` | New database table |
-| `/create-query` | Database query |
-| `/create-protected-route` | Auth-protected route |
-| `/add-shadcn-component` | Install UI component |
-| `/create-form` | Form with validation |
-| `/create-test` | Test file |
-| `/setup-*` | Initialize services |
+| Command | Purpose | Plugin |
+|---------|---------|--------|
+| `/update-specs` | Update progress dashboard | `documentation-tools` |
+| `/plugin` | Manage installed plugins | Claude Built-in |
+| `/help` | See all available commands | Claude Built-in |
 
-## Environment Variables
+## Pro Tips
 
-After setup, add these to `.env.local`:
-
-```bash
-# Database
-DATABASE_URL="postgres://..."
-
-# Auth
-AUTH_SECRET="your-secret"
-GITHUB_ID="..."         # If using OAuth
-GITHUB_SECRET="..."     # If using OAuth
-
-# Payments (if using Polar)
-POLAR_ACCESS_TOKEN="..."
-POLAR_WEBHOOK_SECRET="..."
-NEXT_PUBLIC_POLAR_ORGANIZATION_ID="..."
-
-# AI (if using AI SDK)
-OPENAI_API_KEY="..."
-# or
-ANTHROPIC_API_KEY="..."
-```
-
-## Next Steps
-
-- Read the full [README.md](README.md) for detailed documentation
-- Explore individual plugin directories for customization
-- Check command help: `/help [command-name]`
-- Start building your SaaS! 🚀
+1. **Check MCP Status:** Use `/plugin` to see which MCP servers are currently connected.
+2. **Auto-Discovery:** Claude automatically uses the appropriate tools based on your natural language requests.
+3. **Customize:** Each plugin's behavior is defined in its `commands/` or `skills/` directory.
 
 ---
 
-**Questions?** Email leon.vanzyl@gmail.com
+**Questions?** Contact Darryn Balanco at <darryn@optimus01.com>.
+Happy building! 🚀

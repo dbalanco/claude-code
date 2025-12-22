@@ -1,0 +1,7 @@
+{
+  "name": "apify",
+  "description": "Apify MCP server provides access to a marketplace for web scraping and data extraction tools.",
+  "author": {
+    "name": "Apify"
+  }
+}
