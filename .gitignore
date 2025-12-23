@@ -3,7 +3,7 @@
 
 # Claude Code
 .claude/
-.claude-plugin/marketplace.json.backup
+.claude-plugin/
 .clinerules/
 
 # GitHub
