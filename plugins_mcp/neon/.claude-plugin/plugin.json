@@ -1,7 +1,0 @@
-{
-  "name": "neon",
-  "description": "Neon serverless Postgres MCP server. Manage databases, create branches, run queries, and interact with your Neon projects. Features instant provisioning, automatic scaling, and database branching for development workflows.",
-  "author": {
-    "name": "Neon"
-  }
-}

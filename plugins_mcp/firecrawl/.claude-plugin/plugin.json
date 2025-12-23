@@ -1,7 +1,0 @@
-{
-  "name": "firecrawl",
-  "description": "Firecrawl MCP server for intelligent web scraping and crawling. Extract clean, LLM-ready data from websites with advanced crawling capabilities, JavaScript rendering, and content extraction.",
-  "author": {
-    "name": "Firecrawl"
-  }
-}
