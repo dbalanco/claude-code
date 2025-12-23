@@ -1,0 +1,16 @@
+{
+  "name": "mcp-library",
+  "version": "1.0.0",
+  "description": "Library of pre-configured MCP servers for Claude Code.",
+  "author": {
+    "name": "Darryn Balanco",
+    "email": "darryn@optimus01.com",
+    "url": "https://github.com/dbalanco"
+  },
+  "homepage": "https://github.com/dbalanco/perseon-ai-marketplace",
+  "repository": "https://github.com/dbalanco/perseon-ai-marketplace",
+  "license": "MIT",
+  "keywords": [
+    "mcp"
+  ]
+}

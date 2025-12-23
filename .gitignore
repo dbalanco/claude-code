@@ -3,6 +3,7 @@
 
 # Claude Code
 .claude/
+.clinerules/
 
 # GitHub
 .github/
@@ -11,6 +12,9 @@
 memory-bank/
 perseon/
 specs/
+
+# Plugin Directories
+plugins_mcp/
 
 # Environment
 env.local
