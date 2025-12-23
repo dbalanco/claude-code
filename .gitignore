@@ -3,7 +3,6 @@
 
 # Claude Code
 .claude/
-.claude-plugin/
 .clinerules/
 
 # GitHub
