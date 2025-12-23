@@ -16,7 +16,14 @@
       "description": "Automated documentation system that scans feature specifications, tracks implementation progress, and generates comprehensive app-specs.md documents with progress dashboards",
       "version": "1.0.0",
       "category": "productivity",
-      "keywords": ["documentation", "specifications", "progress-tracking", "project-management", "markdown", "automation"]
+      "keywords": [
+        "documentation",
+        "specifications",
+        "progress-tracking",
+        "project-management",
+        "markdown",
+        "automation"
+      ]
     },
     {
       "name": "mcp-library",
@@ -24,7 +31,9 @@
       "description": "Library of pre-configured MCP servers for Claude Code.",
       "version": "1.0.0",
       "category": "claude-code",
-      "keywords": ["mcp"]
+      "keywords": [
+        "mcp"
+      ]
     }
   ]
 }
