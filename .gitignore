@@ -2,7 +2,7 @@
 .DS_Store
 
 # GitHub
-#.github/
+.github/
 .gitignore
 
 # Claude Code
