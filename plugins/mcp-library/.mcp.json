@@ -34,13 +34,13 @@
       "command": "npx",
       "args": ["shadcn@latest", "mcp"]
     },
-    "vercel": {
-      "command": "npx",
-      "args": ["mcp-remote", "https://mcp.vercel.com"]
-    },
     "supabase": {
       "type": "http",
       "url": "https://mcp.supabase.com/mcp"
+    },
+    "vercel": {
+      "command": "npx",
+      "args": ["mcp-remote", "https://mcp.vercel.com"]
     }
   }
 }
