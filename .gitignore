@@ -3,6 +3,7 @@
 
 # Claude Code
 .claude/
+.claude-plugin/marketplace.json.backup
 .clinerules/
 
 # GitHub
@@ -14,6 +15,7 @@ perseon/
 specs/
 
 # Plugin Directories
+plugins_external/
 plugins_mcp/
 
 # Environment
