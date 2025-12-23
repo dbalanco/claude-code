@@ -21,4 +21,3 @@ plugins_mcp/
 env.local
 env.local.mcp
 *.env.local
-.mcp.json
