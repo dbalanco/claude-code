@@ -1,7 +1,7 @@
 {
-  "name": "mcp-library",
+  "name": "frontend-design",
   "version": "1.0.0",
-  "description": "Library of pre-configured MCP servers for Claude Code.",
+  "description": "Frontend design expert for UI/UX implementation",
   "author": {
     "name": "Darryn Balanco",
     "email": "darryn@optimus01.com",
@@ -11,14 +11,7 @@
   "repository": "https://github.com/dbalanco/claude-code",
   "license": "MIT",
   "keywords": [
-    "chrome-devtools",
-    "context7",
-    "firecrawl",
-    "neon",
-    "playwright",
-    "prisma",
-    "shadcn",
-    "supabase",
-    "vercel"
+    "design",
+    "ui/ux"
   ]
 }
