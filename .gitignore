@@ -1,12 +1,20 @@
 # macOS
 .DS_Store
 
+# GitHub
+#.github/
+.gitignore
+
 # Claude Code
 .claude/
 .clinerules/
 
-# GitHub
-.github/
+# AI Files
+CLAUDE.md
+memory-bank.md
+memory-improvement-protocol.md
+memory-version-increment.md
+mermaid-plans.md
 
 # Project directories
 memory-bank/
