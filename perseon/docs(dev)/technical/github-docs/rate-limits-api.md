@@ -1,0 +1,179 @@
+# GitHub REST API Endpoints for Rate Limits
+
+The REST API is now versioned. For more information, see "[About API versioning](https://docs.github.com/rest/overview/api-versions)."
+
+## Use the REST API to check your current rate limit status.
+
+---
+
+## About rate limits
+
+You can check your current rate limit status at any time. For more information about rate limit rules, see [Rate limits for the REST API](https://docs.github.com/en/rest/overview/rate-limits-for-the-rest-api).
+
+The REST API for searching items has a custom rate limit that is separate from the rate limit governing the other REST API endpoints. For more information, see [REST API endpoints for search](https://docs.github.com/en/rest/search/search). The GraphQL API also has a custom rate limit that is separate from and calculated differently than rate limits in the REST API. For more information, see [Rate limits and query limits for the GraphQL API](https://docs.github.com/en/graphql/overview/resource-limitations#rate-limit). For these reasons, the API response categorizes your rate limit. Under `resources`, you'll see objects relating to different categories:
+
+- The `core` object provides your rate limit status for all non-search-related resources in the REST API.
+
+- The `search` object provides your rate limit status for the REST API for searching (excluding code searches). For more information, see [REST API endpoints for search](https://docs.github.com/en/rest/search/search).
+
+- The `code_search` object provides your rate limit status for the REST API for searching code. For more information, see [REST API endpoints for search](https://docs.github.com/en/rest/search/search#search-code).
+
+- The `graphql` object provides your rate limit status for the GraphQL API.
+
+- The `integration_manifest` object provides your rate limit status for the `POST /app-manifests/{code}/conversions` operation. For more information, see [Registering a GitHub App from a manifest](https://docs.github.com/en/apps/creating-github-apps/setting-up-a-github-app/creating-a-github-app-from-a-manifest#3-you-exchange-the-temporary-code-to-retrieve-the-app-configuration).
+
+- The `dependency_snapshots` object provides your rate limit status for submitting snapshots to the dependency graph. For more information, see [REST API endpoints for the dependency graph](https://docs.github.com/en/rest/dependency-graph).
+
+- The `code_scanning_upload` object provides your rate limit status for uploading SARIF results to code scanning. For more information, see [Uploading a SARIF file to GitHub](https://docs.github.com/en/code-security/code-scanning/integrating-with-code-scanning/uploading-a-sarif-file-to-github).
+
+- The `actions_runner_registration` object provides your rate limit status for registering self-hosted runners in GitHub Actions. For more information, see [REST API endpoints for self-hosted runners](https://docs.github.com/en/rest/actions/self-hosted-runners).
+
+
+For more information on the headers and values in the rate limit response, see [Rate limits for the REST API](https://docs.github.com/en/rest/overview/rate-limits-for-the-rest-api).
+
+---
+
+## Get rate limit status for the authenticated user
+
+**Note**
+
+Accessing this endpoint does not count against your REST API rate limit.
+
+Some categories of endpoints have custom rate limits that are separate from the rate limit governing the other REST API endpoints. For this reason, the API response categorizes your rate limit. Under `resources`, you'll see objects relating to different categories:
+
+- The `core` object provides your rate limit status for all non-search-related resources in the REST API.
+- The `search` object provides your rate limit status for the REST API for searching (excluding code searches). For more information, see "[Search](https://docs.github.com/rest/search/search)."
+- The `code_search` object provides your rate limit status for the REST API for searching code. For more information, see "[Search code](https://docs.github.com/rest/search/search#search-code)."
+- The `graphql` object provides your rate limit status for the GraphQL API. For more information, see "[Resource limitations](https://docs.github.com/graphql/overview/resource-limitations#rate-limit)."
+- The `integration_manifest` object provides your rate limit status for the `POST /app-manifests/{code}/conversions` operation. For more information, see "[Creating a GitHub App from a manifest](https://docs.github.com/apps/creating-github-apps/setting-up-a-github-app/creating-a-github-app-from-a-manifest#3-you-exchange-the-temporary-code-to-retrieve-the-app-configuration)."
+- The `dependency_snapshots` object provides your rate limit status for submitting snapshots to the dependency graph. For more information, see "[Dependency graph](https://docs.github.com/rest/dependency-graph)."
+- The `dependency_sbom` object provides your rate limit status for requesting SBOMs from the dependency graph. For more information, see "[Dependency graph](https://docs.github.com/rest/dependency-graph)."
+- The `code_scanning_upload` object provides your rate limit status for uploading SARIF results to code scanning. For more information, see "[Uploading a SARIF file to GitHub](https://docs.github.com/code-security/code-scanning/integrating-with-code-scanning/uploading-a-sarif-file-to-github)."
+- The `actions_runner_registration` object provides your rate limit status for registering self-hosted runners in GitHub Actions. For more information, see "[Self-hosted runners](https://docs.github.com/rest/actions/self-hosted-runners)."
+- The `source_import` object is no longer in use for any API endpoints, and it will be removed in the next API version. For more information about API versions, see "[API Versions](https://docs.github.com/rest/about-the-rest-api/api-versions)."
+
+**Note**
+
+The `rate` object is closing down. If you're writing new API client code or updating existing code, you should use the `core` object instead of the `rate` object. The `core` object contains the same information that is present in the `rate` object.
+
+### Fine-grained access tokens for "Get rate limit status for the authenticated user"
+
+This endpoint works with the following fine-grained token types:
+
+- [GitHub App user access tokens](https://docs.github.com/en/apps/creating-github-apps/authenticating-with-a-github-app/generating-a-user-access-token-for-a-github-app)
+- [GitHub App installation access tokens](https://docs.github.com/en/apps/creating-github-apps/authenticating-with-a-github-app/generating-an-installation-access-token-for-a-github-app)
+- [Fine-grained personal access tokens](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-fine-grained-personal-access-token)
+
+The fine-grained token does not require any permissions.
+
+This endpoint can be used without authentication if only public resources are requested.
+
+### HTTP response status codes for "Get rate limit status for the authenticated user"
+
+| Status code | Description |
+| --- | --- |
+| `200` | OK |
+| `304` | Not modified |
+| `404` | Resource not found |
+
+### Code samples for "Get rate limit status for the authenticated user"
+
+#### Request example
+
+get/rate_limit
+
+- cURL
+- JavaScript
+- GitHub CLI
+
+Copy to clipboard curl request example
+
+`curl -L \
+  -H "Accept: application/vnd.github+json" \
+  -H "X-GitHub-Api-Version: 2022-11-28" \
+https://api.github.com/rate_limit`
+
+#### Response
+
+- Example response
+- Response schema
+
+Status: 200
+
+```json
+{
+"resources": {
+    "core": {
+      "limit": 5000,
+      "used": 1,
+      "remaining": 4999,
+      "reset": 1691591363
+    },
+    "search": {
+      "limit": 30,
+      "used": 12,
+      "remaining": 18,
+      "reset": 1691591091
+    },
+    "graphql": {
+      "limit": 5000,
+      "used": 7,
+      "remaining": 4993,
+      "reset": 1691593228
+    },
+    "integration_manifest": {
+      "limit": 5000,
+      "used": 1,
+      "remaining": 4999,
+      "reset": 1691594631
+    },
+    "source_import": {
+      "limit": 100,
+      "used": 1,
+      "remaining": 99,
+      "reset": 1691591091
+    },
+    "code_scanning_upload": {
+      "limit": 500,
+      "used": 1,
+      "remaining": 499,
+      "reset": 1691594631
+    },
+    "actions_runner_registration": {
+      "limit": 10000,
+      "used": 0,
+      "remaining": 10000,
+      "reset": 1691594631
+    },
+    "scim": {
+      "limit": 15000,
+      "used": 0,
+      "remaining": 15000,
+      "reset": 1691594631
+    },
+    "dependency_snapshots": {
+      "limit": 100,
+      "used": 0,
+      "remaining": 100,
+      "reset": 1691591091
+    },
+    "code_search": {
+      "limit": 10,
+      "used": 0,
+      "remaining": 10,
+      "reset": 1691591091
+    },
+    "code_scanning_autofix": {
+      "limit": 10,
+      "used": 0,
+      "remaining": 10,
+      "reset": 1691591091
+    }
+},
+"rate": {
+    "limit": 5000,
+    "used": 1,
+    "remaining": 4999,
+    "reset": 1372700873
+}
+}
